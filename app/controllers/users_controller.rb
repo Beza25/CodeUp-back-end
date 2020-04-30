@@ -1,0 +1,16 @@
+class UsersController < ApplicationController
+
+    def index 
+        render json: User.all
+    end
+
+    def show
+        render json: User.find(params[:id])
+    end
+
+    def update
+        user = User.find(params[:id])
+        
+        render json: User.update(level_id: params[:level_id])
+    end
+end
