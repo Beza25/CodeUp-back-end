@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-    has_one :level
+    belongs_to :level
 end

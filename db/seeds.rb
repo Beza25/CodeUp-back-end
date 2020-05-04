@@ -10,8 +10,9 @@ Level.destroy_all
 User.destroy_all
 Question.destroy_all
 
-l1 = Level.create(name:"easy")
-l2 = Level.create(name:"medium")
+l1 = Level.create(name:"easy", number: 1)
+l2 = Level.create(name:"medium", number: 2)
+l3 = Level.create(name:"hard", number: 3 )
 u1= User.create(name:"Alex", username:"alex", level_id: l1.id)
 
 
@@ -94,7 +95,7 @@ incorrect_answers:[
 
 
 q9 = Question.create(question: "Which internet company began life as an online bookstore called &#039;Cadabra&#039;?",
-    level: l2,  
+    level: l3,  
     correct_answer: "Amazon",
       incorrect_answers: [
         "eBay",
@@ -102,7 +103,7 @@ q9 = Question.create(question: "Which internet company began life as an online b
         "Shopify"])
 
 q10 = Question.create(question: "Whistler was the codename of this Microsoft Operating System.",
-    level: l2,
+    level: l3,
     correct_answer: "Windows XP",
     incorrect_answers: [
         "Windows 2000",
@@ -110,7 +111,7 @@ q10 = Question.create(question: "Whistler was the codename of this Microsoft Ope
         "Windows 95"])
 
 q11 = Question.create(question: "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
-    level: l2,
+    level: l3,
     correct_answer: "center",
     incorrect_answers: [
       "static",
